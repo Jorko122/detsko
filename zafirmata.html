@@ -1,0 +1,79 @@
+<html>
+<head>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<title>За фирмата</title>
+<style>
+h4.j
+{color: black;
+}
+h1.h
+{color: #075C63;
+font-family: Arial, sans-serif;
+}
+h1.a
+{color: #075657;
+text-shadow: 2px 2px 5px #11CFD0;
+}
+nav{
+float:left;
+}
+body
+{
+  background-image: url("paper.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.button {
+  width: 100px;
+  padding: 15px 32px;
+  background-color:#66b3ff;
+  border: solid;
+  color: #12395A;
+  border-color: #4CB3C3;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<nav><a href="index.html"><img src="logo.png" hight=110px; width=110px;/></a></nav>
+<center><i><h1 class="h">Магазин за играчки</i></h1></center>
+<center><h1 class="a">ДЕТСКО ЦАРСТВО</h1></center>
+
+<center><a href="nachalo.html" class="button">Начало</a>
+<a href="zafirmata.html" class="button">За фирмата</a>
+<a href="katalog.html" class="button">Каталог</a>
+<a href="promocii.html" class="button">Промоции</a>
+<a href="kontakti.html" class="button">Контакти</a>
+<a href="avtor.html" class="button">Автор</a></br></center></br></br>
+<center><div id="myChart" style="width:100%; max-width:600px; height:500px;"></div></center>
+<script>
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+var data = google.visualization.arrayToDataTable([
+  ['Артикули', 'Брой продажби'],
+  ['2020',105],
+  ['2021',216],
+  ['2022',485],
+]);
+
+var options = {
+  title:'Общо продажби',
+  
+};
+
+var chart = new google.visualization.BarChart(document.getElementById('myChart'));
+  chart.draw(data, options);
+}
+</script>
+<center><h4 class="j">Авторските права са запазени &copy</h4></center>
+</body>
+</html>
